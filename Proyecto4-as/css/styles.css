@@ -1,0 +1,284 @@
+:root{
+    --primario: #784D3C;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --claro: #e1e1e1;
+
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px */
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /* Interlineado */
+}
+
+/* GLOBALES */
+/* Aca pongo todo lo que voy a usar mas de una vez */
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    /* width: min(90%,120rem); Es lo mismo que los dos de arriba (es nuevo) */
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    line-height: 2;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+
+/* UTILIDADES */
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.center-texto{
+    text-align: center;
+}
+
+/* HEADER */
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* dos veces center porque tengo que centrarla vertical y horizontalmente. Aca estaria poniendo el centro de la imagen como la parte importante cuando vaya cambiando de tamaños de pantalla */
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+/* .barra{
+    padding: 4rem;
+} */
+@media (min-width: 768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /*Alinea el logo con la barra */
+    }
+}   
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+.logo__bold{
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex; /* Se coloca uno al lado del otro */
+        gap: 2rem; /* Separacion entre cada boton de navegacion */
+    }
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--claro);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.boton{
+    display: block; /*ocupa todo el ancho*/
+    font-family: var(--fuenteHeading);
+    color: var(--blanco); /* Color del texto del boton */
+    text-align: center; /* Alineo al centro */
+    padding: 1rem 3rem; /* Distancia entre el texto y el borde del boton */
+    font-size: 1.8rem; /* Tamaño del texto */
+    text-transform: uppercase; /* Transformo en mayusculas */
+    font-weight: 700; /* Pongo en negrita */
+    margin-bottom: 2rem; /* Distancia entre el borde del boton hacia abajo */
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+.boton--primario{
+    background-color: var(--negro);
+}
+
+.boton--secundario{
+    background-color: var(--primario);
+}
+.cursos{
+    list-style: none; /* Saca el estilo de la viñeta de la lista */
+}
+.widget-curso{
+    border-bottom: 1px solid var(--claro); /* Pongo una linea debajo del boton */
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border: none; /* Al ulitmo curso no le pone la linea debajo del boton */
+    margin-bottom: 0; /* Al ultimo curos no le pone el margin abajo */
+}
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info{
+    font-weight: normal;
+}
+
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--negro); /*Color de fondo del footer*/
+    padding-bottom: 3rem;
+    margin-top: 4rem 0;
+}
+
+/* SOBRE NOSOTROS */
+.sobre-nosotros{
+    margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+    /* CON FLEX */
+    /* .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sobre-nosotros__imagen{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .sobre-nosotros__imagen{
+        flex: 0 0 calc(50% - 1rem);
+    } */
+
+    /* CON GRID */
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+/* CURSOS */
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--claro);
+}
+
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso:last-of-type{
+    border: none;
+}
+
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info{
+    font-weight: normal;
+}
+
+.curso__label,
+.curso__info{
+    font-size: 2rem;
+}
+
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    
+
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem; 
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--claro);
+}
+.campo__field--textarea{
+    height: 20rem;
+}

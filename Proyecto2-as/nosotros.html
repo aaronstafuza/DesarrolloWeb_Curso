@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font a utilizar -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <!-- alt = ... sirve por si no carga la imagen me carga un titulo que describe la imagen que iria ahi -->
+            <img class="header__logo" src="img/logo.png" alt="logotipo"> 
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Tienda</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <p>Suspendisse congue sapien in est eleifend semper. Nam ultrices arcu imperdiet lorem commodo efficitur. Maecenas quam nibh, accumsan nec turpis eget, dapibus auctor urna. Ut sagittis felis vitae massa imperdiet fringilla. In id tempus diam, vel accumsan est. Aenean auctor ante vitae turpis sodales pretium. Vestibulum vitae diam ac nunc semper molestie eu fringilla ex. Maecenas consequat massa eu odio blandit, ac maximus erat efficitur.</p>
+
+                <p>Aliquam interdum rutrum lorem sed fringilla. Sed porttitor libero in ex laoreet, eget posuere elit viverra. Mauris et purus feugiat, porta urna et, gravida mi. Maecenas semper egestas blandit.</p>
+            </div>
+            <img class="nosotros__imagen" src="img/nosotros.jpg" alt="imagen nosotros"> 
+        </div>
+    </main>
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">Por que comprar con nosotros?</h2>
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+                <p>Suspendisse congue sapien in est eleifend semper. Nam ultrices arcu imperdiet lorem commodo efficitur</p>
+            </div><!-- .bloque -->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Para Devs</h3>
+                <p>Suspendisse congue sapien in est eleifend semper. Nam ultrices arcu imperdiet lorem commodo efficitur</p>
+            </div><!-- .bloque -->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envio Gratis</h3>
+                <p>Suspendisse congue sapien in est eleifend semper. Nam ultrices arcu imperdiet lorem commodo efficitur</p>
+            </div><!-- .bloque -->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">La mejor calidad</h3>
+                <p>Suspendisse congue sapien in est eleifend semper. Nam ultrices arcu imperdiet lorem commodo efficitur</p>
+            </div><!-- .bloque -->
+
+        </div><!-- .bloques -->
+    </section>
+    <footer class="footer">
+        <p class="footer__texto">FrontEnd Store - Todos los derechos Reservados 2021.</p> 
+    </footer>
+</body>
+</html>
